@@ -8,7 +8,7 @@
 import Foundation
 
 /// Means by which data is communicated to and from an endpoint
-class API {
+public class API {
     func get<T>(type: T.Type, endpoint: Endpoint) async -> T? where T: Decodable {
         return await get(type: type, url: endpoint.url)
     }

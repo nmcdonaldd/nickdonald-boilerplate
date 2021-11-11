@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Endpoint {
+public struct Endpoint {
     var host: String
     var path: String = ""
     var queryItems: [URLQueryItem]?
