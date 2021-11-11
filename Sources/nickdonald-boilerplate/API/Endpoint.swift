@@ -17,7 +17,7 @@ public struct Endpoint {
         host: String,
         path: String = "",
         scheme: String = "https",
-        queryItems: [URLQueryItem]?) {
+        queryItems: [URLQueryItem]? = nil) {
         self.host = host
         self.path = path
         self.scheme = scheme
