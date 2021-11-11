@@ -11,15 +11,15 @@ import Foundation
 public class API {
     public init() {}
     
-    func get<T>(type: T.Type, endpoint: Endpoint) async -> T? where T: Decodable {
+    public func get<T>(type: T.Type, endpoint: Endpoint) async -> T? where T: Decodable {
         return await get(type: type, url: endpoint.url)
     }
     
-    func get<T>(type: T.Type, url: URL) async -> T? where T: Decodable {
+    public func get<T>(type: T.Type, url: URL) async -> T? where T: Decodable {
         return await get(type: type, request: URLRequest(url: url))
     }
     
-    func get<T>(type: T.Type, request: URLRequest) async -> T? where T: Decodable {
+    public func get<T>(type: T.Type, request: URLRequest) async -> T? where T: Decodable {
         guard let (data, response) = try? await URLSession.shared.data(for: request)
         else {
             return nil
