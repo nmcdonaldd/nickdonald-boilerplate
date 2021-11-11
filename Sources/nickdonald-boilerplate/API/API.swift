@@ -9,6 +9,7 @@ import Foundation
 
 /// Means by which data is communicated to and from an endpoint
 public class API {
+    /// Simple default public initializer
     public init() {}
     
     public func get<T>(type: T.Type, endpoint: Endpoint) async -> T? where T: Decodable {
