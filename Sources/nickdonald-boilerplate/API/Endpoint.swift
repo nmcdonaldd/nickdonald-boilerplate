@@ -8,10 +8,21 @@
 import Foundation
 
 public struct Endpoint {
-    public var host: String
-    public var path: String = ""
-    public var queryItems: [URLQueryItem]?
-    public var scheme = "https"
+    var host: String
+    var path: String
+    var scheme: String
+    var queryItems: [URLQueryItem]?
+    
+    public init(
+        host: String,
+        path: String = "",
+        scheme: String = "https",
+        queryItems: [URLQueryItem]?) {
+        self.host = host
+        self.path = path
+        self.scheme = scheme
+        self.queryItems = queryItems
+    }
 }
 
 extension Endpoint {
