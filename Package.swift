@@ -24,8 +24,8 @@ let package = Package(
         .target(
             name: "nickdonald-boilerplate",
             dependencies: []),
-        .testTarget(
-            name: "nickdonald-boilerplateTests",
-            dependencies: ["nickdonald-boilerplate"]),
+//        .testTarget(
+//            name: "nickdonald-boilerplateTests",
+//            dependencies: ["nickdonald-boilerplate"]),
     ]
 )

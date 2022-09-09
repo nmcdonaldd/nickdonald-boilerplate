@@ -21,8 +21,7 @@ public class API {
     }
     
     public func get<T>(type: T.Type, request: URLRequest) async -> T? where T: Decodable {
-        guard let (data, response) = try? await URLSession.shared.data(for: request)
-        else {
+        guard let (data, response) = try? await URLSession.shared.data(for: request) else {
             return nil
         }
             
