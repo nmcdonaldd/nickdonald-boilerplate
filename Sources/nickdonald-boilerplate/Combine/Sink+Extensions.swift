@@ -8,7 +8,7 @@
 import Combine
 
 extension Subscribers.Sink {
-    convenience init(receiveValue: @escaping (Input) -> Void) {
+    public convenience init(receiveValue: @escaping (Input) -> Void) {
         self.init { _ in
             // Do nothing...
         } receiveValue: { receiveValue($0) }
